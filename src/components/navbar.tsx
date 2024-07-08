@@ -23,7 +23,7 @@ export const Navbar = () => {
   const router = useRouter();
 
   return (
-    <nav className="p-4 sticky top-0 z-10 bg-white">
+    <nav className="p-4 sticky top-0 z-30 bg-white">
       <div className="w-full mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex-shrink-0 cursor-pointer">
@@ -33,14 +33,14 @@ export const Navbar = () => {
         {/* Side Menu (Mobile and Tablet) */}
         {isOpen && (
           <motion.div
-            animate={isOpen ? "open" : "closed"}
-            variants={{
-              open: { opacity: 1, x: 0 },
-              closed: { opacity: 0, x: "-100%" },
-            }}
+            // animate={isOpen ? "open" : "closed"}
+            // variants={{
+            //   open: { opacity: 1, x: 0 },
+            //   closed: { opacity: 0, x: "-100%" },
+            // }}
             className="lg:hidden fixed inset-0 bg-gray-800 bg-opacity-75 z-50"
           >
-            <div className="max-w-sm w-full bg-white h-full shadow-lg p-4 transform transition-transform ease-in-out duration-300 translate-x-full">
+            <div className="w-[300px] bg-white h-full shadow-lg p-4 transform transition-transform ease-in-out duration-300 translate-x-full">
               <div className="flex justify-start">
                 <button
                   onClick={() => setIsOpen(false)}
