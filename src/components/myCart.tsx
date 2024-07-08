@@ -83,8 +83,8 @@ const MyCartCompoent = (props: Props) => {
                       ))}
                     </select>
                   </div>
-                  <div className="flex">
-                    <p className="font-normal text-[16px] w-[100px]">
+                  <div className="flex justify-between w-[150px]">
+                    <p className="font-normal text-[16px] ">
                       {data?.price * (data.title === desc ? quantity : 1)}
                     </p>
                     <button
