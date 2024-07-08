@@ -73,13 +73,13 @@ const HomePageComponent = () => {
 
   return (
     <div>
-      <div className="flex gap-5">
+      <div className="flex flex-col sm:flex-row gap-5">
         {/* sidebar */}
-        <div className="min-w-[187px] max-h-[700px] flex flex-col items-center shadow-custom sticky top-0">
-          <div className="w-full h-[60px] flex items-center justify-center border-gray-200 border-b">
+        <div className="sm:flex sm:min-w-[187px] max-h-[700px] flex flex-col items-center shadow-custom sticky top-20 z-4ß0 bg-white">
+          <div className="hidden sm:flex w-full h-[60px] flex items-center justify-center border-gray-200 border-b">
             <p className="font-normal text-md">All Women&apos;s</p>
           </div>
-          <div className="w-full flex flex-col gap-4 items-start justify-start p-[24px]">
+          <div className="hidden w-full sm:flex flex-col gap-4 items-start justify-start p-[24px]">
             {sidebarData?.map(({ label }, index) => (
               <p
                 key={index}
@@ -89,6 +89,7 @@ const HomePageComponent = () => {
               </p>
             ))}
           </div>
+
           <div className="w-full h-[60px] flex items-center justify-center border-gray-200 border-b">
             <p className="font-normal text-md">Filter by:</p>
           </div>
@@ -177,7 +178,7 @@ const HomePageComponent = () => {
           <h1 className="font-bold text-sm sm:text-xl">
             Women’s Collection: Tops, Bottoms, Jackets + More{" "}
           </h1>
-          <div className="w-full flex flex-wrap gap-2 mt-4">
+          <div className="w-full flex flex-wrap gap-2 mt-4 justify-center sm:justify-start">
             {isLoading ? (
               <>
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((data) => (
@@ -190,7 +191,7 @@ const HomePageComponent = () => {
               <>
                 {currentItems?.map((data: any) => (
                   <div
-                    className="relative h-[414px] w-[200px] flex flex-col gap-5 cursor-pointer items-start justify-start"
+                    className="relative h-[414px] w-[200px] flex flex-col gap-5 cursor-pointer items-center justify-start"
                     key={data?.id}
                   >
                     {/* <Image src={data?.image} alt="image" width={100} height={100} /> */}
