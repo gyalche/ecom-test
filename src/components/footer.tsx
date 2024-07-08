@@ -10,7 +10,7 @@ type Props = {};
 const Footer = (props: Props) => {
   return (
     <Wrapper>
-      <div className="footer flex justify-start sm:justify-around text-white flex-wrap">
+      <div className="footer flex justify-start gap-10 sm:justify-around text-white flex-wrap">
         {navbarData?.map((data, index) => (
           <div key={data?.title} className="flex">
             <div className="flex flex-col items-start  gap-7 text-white">
