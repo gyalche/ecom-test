@@ -1,3 +1,7 @@
+import cat1 from "../assets/cat1.png";
+import cat2 from "../assets/cat2.png";
+import cat3 from "../assets/cat3.png";
+import cat4 from "../assets/cat4.png";
 export const navItems = [
   {
     label: "Winter",
@@ -62,5 +66,24 @@ export const filterValue = [
   {
     label: "Size",
     values: ["XL", "L", "M", "S"],
+  },
+];
+
+export const moreCategory = [
+  {
+    image: cat1,
+    label: "jacet",
+  },
+  {
+    image: cat2,
+    label: "cat2",
+  },
+  {
+    image: cat3,
+    label: "cat3",
+  },
+  {
+    image: cat4,
+    label: "cat4",
   },
 ];

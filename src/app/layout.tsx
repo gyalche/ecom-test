@@ -3,7 +3,7 @@ import { Nunito } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
-import Provider from "@/Provider";
+import Providers from "@/Provider";
 const nunito = Nunito({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
@@ -19,11 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={nunito.className}>
-        <Provider>
+        <Providers>
           <Navbar />
           {children}
           <Footer />
-        </Provider>
+        </Providers>
       </body>
     </html>
   );

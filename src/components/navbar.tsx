@@ -9,16 +9,25 @@ import Search from "../assets/Search.png";
 import Bag from "../assets/Bag.png";
 import Fav from "../assets/Fav.png";
 import { motion } from "framer-motion";
+import { Badge } from "@mui/material";
+import { useSelector } from "react-redux";
+import { getBagged, getFavList } from "@/services/redux/slices/product.slice";
+import { useRouter } from "next/navigation";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [search, setSearch] = useState<boolean>(false);
+  const favProduct = useSelector(getFavList);
+  const bagged = useSelector(getBagged);
+
+  const router = useRouter();
+
   return (
     <nav className="p-4 sticky top-0 z-10 bg-white">
       <div className="w-full mx-auto flex justify-between items-center">
         {/* Logo */}
-        <div className="flex-shrink-0">
-          <Image src={logo} alt="logo" />
+        <div className="flex-shrink-0 cursor-pointer">
+          <Image src={logo} alt="logo" onClick={() => router.push("/")} />
         </div>
 
         {/* Side Menu (Mobile and Tablet) */}
@@ -112,8 +121,17 @@ export const Navbar = () => {
               className="cursor-pointer"
               onClick={() => setSearch(!search)}
             />
-            <Image src={Bag} alt="bag" className="cursor-pointer" />
-            <Image src={Fav} alt="fav" className="cursor-pointer" />
+            <Badge badgeContent={bagged?.length || "0"} color="secondary">
+              <Image
+                src={Bag}
+                alt="bag"
+                className="cursor-pointer"
+                onClick={() => router.push("/cart")}
+              />
+            </Badge>
+            <Badge badgeContent={favProduct?.length || "0"} color="primary">
+              <Image src={Fav} alt="fav" className="cursor-pointer" />
+            </Badge>
             <Image src={Profile} alt="profile" className="profile" />
           </div>
         </div>
