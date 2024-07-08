@@ -75,7 +75,7 @@ const HomePageComponent = () => {
     <div>
       <div className="flex flex-col sm:flex-row gap-5">
         {/* sidebar */}
-        <div className="sm:flex sm:min-w-[187px] max-h-[700px] flex flex-col items-center shadow-custom sticky top-20 z-4ß0 bg-white">
+        <div className="sm:flex sm:min-w-[187px] max-h-[700px] flex flex-col items-center shadow-custom sticky top-20 z-20 sm:z-0 bg-white">
           <div className="hidden sm:flex w-full h-[60px] flex items-center justify-center border-gray-200 border-b">
             <p className="font-normal text-md">All Women&apos;s</p>
           </div>
