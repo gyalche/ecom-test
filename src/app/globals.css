@@ -25,3 +25,15 @@ p {
   font-size: 16px;
   font-weight: 300;
 }
+.footer {
+  width: 100%;
+  border: 1px solid red;
+  color: white;
+  background-color: #001427;
+  padding: 50px 20px;
+}
+.link_word {
+  font-weight: 100;
+  font-size: 16px;
+  color: white;
+}
