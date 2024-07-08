@@ -67,7 +67,7 @@ const MyCartCompoent = (props: Props) => {
 
                   {/* price */}
                   <div className="w-[250px]">
-                    <p className="font-normal text-[16px]">{data?.price}</p>
+                    <p className="font-normal text-[16px]">${data?.price}</p>
                   </div>
                   <div className="border-black w-[220px]">
                     <select
@@ -85,7 +85,7 @@ const MyCartCompoent = (props: Props) => {
                   </div>
                   <div className="flex justify-between w-[150px]">
                     <p className="font-normal text-[16px] ">
-                      {data?.price * (data.title === desc ? quantity : 1)}
+                      ${data?.price * (data.title === desc ? quantity : 1)}
                     </p>
                     <button
                       className="border border-red-600 px-3 rounded-lg text-red-800"
